@@ -1,0 +1,22 @@
+.nav {
+  background-color: $color-primary;
+
+  &__container {
+    margin: auto;
+    max-width: 96rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 2rem;
+  }
+
+  &__link {
+    color: $color-black;
+    display: block;
+    text-decoration: none;
+  }
+}
