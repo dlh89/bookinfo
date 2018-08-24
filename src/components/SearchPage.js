@@ -2,6 +2,7 @@ import React from "react";
 import SearchHeader from "./SearchHeader";
 import SearchResults from "./SearchResults";
 import DataContainer from "./DataContainer";
+import LoadingSpinner from "./LoadingSpinner";
 
 export default class SearchPage extends React.Component {
   constructor(props) {
@@ -24,16 +25,24 @@ export default class SearchPage extends React.Component {
   render() {
     return (
       <div>
-        <SearchHeader searchCallback={this.onSearch} />
-        <DataContainer
-          method={"search"}
-          searchTerm={this.state.searchTerm}
-          dataCallback={this.onData}
-        />
-        <SearchResults
-          searchTerm={this.state.searchTerm}
-          resultsData={this.state.resultsData}
-        />
+        <div className="container">
+          <SearchHeader searchCallback={this.onSearch} />
+          <DataContainer
+            method={"search"}
+            searchTerm={this.state.searchTerm}
+            dataCallback={this.onData}
+          />
+        </div>
+        <div className="container">
+          <LoadingSpinner
+            startCondition={this.state.searchTerm}
+            endCondition={this.state.resultsData}
+          />
+          <SearchResults
+            searchTerm={this.state.searchTerm}
+            resultsData={this.state.resultsData}
+          />
+        </div>
       </div>
     );
   }

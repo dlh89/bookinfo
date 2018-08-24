@@ -5,6 +5,7 @@ import Description from "../components/Description";
 import DataContainer from "../components/DataContainer";
 import BookPageNavbar from "../components/BookPageNavbar";
 import BookHeader from "../components/BookHeader";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export default class BookPageRouter extends React.Component {
   constructor(props) {
@@ -19,12 +20,13 @@ export default class BookPageRouter extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="container">
         <DataContainer
           method="find"
           searchTerm={this.state.bookId}
           dataCallback={this.dataCallback}
         />
+        <LoadingSpinner startCondition={true} endCondition={this.state.data} />
         <BookHeader data={this.state.data} />
         <BookPageNavbar match={this.props.match} />
         <Route

@@ -1,3 +1,11 @@
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 *,
 *::after,
 *::before {
@@ -22,13 +30,30 @@ html {
 }
 
 body {
-  font-family: "Assistant", sans-serif;
+  font-family: "Noto Serif", serif;
   font-size: 1.8rem;
   line-height: 1.7;
 }
 
+.u-spinner {
+  animation: spin 1s linear infinite;
+  border: 0.7rem solid #333;
+  border-top-color: #d9f3ff;
+  border-radius: 50%;
+  height: 54px;
+  width: 54px;
+}
+
+.u-absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .nav {
   background-color: #d9f3ff;
+  margin-bottom: 2.2rem;
 }
 .nav__container {
   margin: auto;
@@ -36,14 +61,38 @@ body {
 }
 .nav__list {
   list-style: none;
+  overflow: hidden;
 }
 .nav__item {
+  border-right: 1px solid #333;
+  float: left;
   font-size: 2rem;
+  min-width: 14rem;
+  text-align: center;
+}
+.nav__item:first-child {
+  border-left: 1px solid #333;
 }
 .nav__link {
   color: #333;
   display: block;
   text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.nav__link:hover {
+  background-color: red;
+}
+
+.container {
+  margin: auto;
+  max-width: 96rem;
+  position: relative;
+}
+@media (max-width: 75em) {
+  .container {
+    margin: 0 3.2rem;
+    max-width: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
