@@ -1,0 +1,27 @@
+.list {
+  list-style: none;
+
+  &__item {
+    background-color: $color-light-grey;
+    border-radius: 0.4rem;
+    display: flex;
+    padding: 1.2rem;
+    justify-content: space-between;
+    margin: $medium 0;
+    transition: background-color 0.2s ease;
+    width: 100%;
+
+    &:hover {
+      background-color: darken($color-light-grey, 5%);
+    }
+  }
+
+  &__link {
+    color: $color-blue;
+    text-decoration: none;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+}

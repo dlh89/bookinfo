@@ -17,10 +17,13 @@ export default class SearchHeader extends React.Component {
   render() {
     return (
       <div>
-        <h1>Search for a book</h1>
-        <form onSubmit={this.handleSearch}>
-          <input ref={this.searchInput} />
-          <button>Search</button>
+        <h1 className="heading">Search for a book</h1>
+        <form
+          onSubmit={this.handleSearch}
+          className="search-box u-margin-top-small"
+        >
+          <input ref={this.searchInput} className="search-box__input" />
+          <button className="search-box__button">Search</button>
         </form>
       </div>
     );

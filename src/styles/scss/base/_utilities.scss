@@ -1,6 +1,6 @@
 .u-spinner {
   animation: spin 1s linear infinite;
-  border: 0.7rem solid $color-black;
+  border: 0.5rem solid $color-light-grey;
   border-top-color: $color-primary;
   border-radius: 50%;
   height: 54px;
@@ -13,4 +13,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.u-margin-top-large {
+  margin-top: $large;
+}
+
+.u-margin-top-medium {
+  margin-top: $medium;
+}
+
+.u-margin-top-small {
+  margin-top: $small;
 }

@@ -30,15 +30,30 @@ html {
 }
 
 body {
-  font-family: "Noto Serif", serif;
+  font-family: "Rubik", sans-serif;
   font-size: 1.8rem;
   line-height: 1.7;
 }
 
+.heading {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.primary-heading {
+  font-size: 4.6rem;
+  margin-bottom: 4rem;
+}
+
+.subheading {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
 .u-spinner {
   animation: spin 1s linear infinite;
-  border: 0.7rem solid #333;
-  border-top-color: #d9f3ff;
+  border: 0.5rem solid #efefef;
+  border-top-color: #2bcbba;
   border-radius: 50%;
   height: 54px;
   width: 54px;
@@ -51,9 +66,44 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.u-margin-top-large {
+  margin-top: 4rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 2rem;
+}
+
+.u-margin-top-small {
+  margin-top: 1rem;
+}
+
+.list {
+  list-style: none;
+}
+.list__item {
+  background-color: #efefef;
+  border-radius: 0.4rem;
+  display: flex;
+  padding: 1.2rem;
+  justify-content: space-between;
+  margin: 2rem 0;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+.list__item:hover {
+  background-color: #e2e2e2;
+}
+.list__link {
+  color: #4b7bec;
+  text-decoration: none;
+}
+.list__title {
+  font-weight: 600;
+}
+
 .nav {
-  background-color: #d9f3ff;
-  margin-bottom: 2.2rem;
+  margin-bottom: 4rem;
 }
 .nav__container {
   margin: auto;
@@ -64,23 +114,62 @@ body {
   overflow: hidden;
 }
 .nav__item {
-  border-right: 1px solid #333;
   float: left;
   font-size: 2rem;
   min-width: 14rem;
   text-align: center;
 }
-.nav__item:first-child {
-  border-left: 1px solid #333;
-}
 .nav__link {
   color: #333;
   display: block;
+  padding: 2rem 0;
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
-.nav__link:hover {
-  background-color: red;
+.nav__link:hover, .nav__link--active {
+  color: #2bcbba;
+}
+
+.search-box {
+  display: flex;
+}
+@media (max-width: 37.5em) {
+  .search-box {
+    flex-direction: column;
+  }
+}
+.search-box__input {
+  background-color: #efefef;
+  border: none;
+  border-radius: 0.6rem 0 0 0.6rem;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1.2rem;
+}
+@media (max-width: 37.5em) {
+  .search-box__input {
+    border-radius: 0.6rem 0.6rem 0 0;
+  }
+}
+.search-box__button {
+  background-color: #2bcbba;
+  border: none;
+  border-radius: 0 0.6rem 0.6rem 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  padding: 1.2rem;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+@media (max-width: 37.5em) {
+  .search-box__button {
+    border-radius: 0 0 0.6rem 0.6rem;
+  }
+}
+.search-box__button:hover {
+  background-color: #27b6a7;
 }
 
 .container {

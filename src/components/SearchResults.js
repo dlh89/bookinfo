@@ -5,16 +5,16 @@ const SearchHeader = props => (
     {props.resultsData && (
       <div>
         <h2>Results for "{props.searchTerm}"</h2>
-        <ul>
+        <ul className="list">
           {props.resultsData.map(result => (
-            <li key={result.id}>
-              <div>
-                <a href={`/book/${result.id}`}>{result.volumeInfo.title}</a>
-              </div>
-              {result.volumeInfo.authors && (
-                <div>by {result.volumeInfo.authors[0]}</div>
-              )}
-            </li>
+            <a href={`/book/${result.id}`} className="list__link">
+              <li key={result.id} className="list__item">
+                <div className="list__title">{result.volumeInfo.title}</div>
+                {result.volumeInfo.authors && (
+                  <div>by {result.volumeInfo.authors[0]}</div>
+                )}
+              </li>
+            </a>
           ))}
         </ul>
       </div>
