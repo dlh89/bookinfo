@@ -9,10 +9,9 @@ export default class SearchHeader extends React.Component {
 
   handleSearch(e) {
     e.preventDefault();
-    this.props.searchCallback(
-      this.searchInput.current.value.trim().toLowerCase()
-    );
+    const searchTerm = this.searchInput.current.value.trim().toLowerCase();
     this.searchInput.current.value = "";
+    this.props.history.push(`/search/${searchTerm}`);
   }
   render() {
     return (

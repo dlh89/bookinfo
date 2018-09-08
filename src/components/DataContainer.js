@@ -17,6 +17,9 @@ export default class DataContainer extends React.Component {
     }
   }
   getData() {
+    if (this.props.searchingCallback) {
+      this.props.searchingCallback();
+    }
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = e => {
       if (e.target.readyState === 4) {
