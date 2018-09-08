@@ -5,7 +5,10 @@ const SearchResultsList = props => {
     <div>
       {props.resultsData && (
         <div>
-          <h2>Results for "{props.searchTerm}"</h2>
+          <h2 className="subheading u-margin-top-medium">
+            Results for "{props.searchTerm}"
+          </h2>
+          <hr className="u-hr u-hr--primary u-margin-top-small" />
           <ul className="list">
             {props.resultsData.map(result => (
               <a

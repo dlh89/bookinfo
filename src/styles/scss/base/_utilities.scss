@@ -3,8 +3,8 @@
   border: 0.5rem solid $color-light-grey;
   border-top-color: $color-primary;
   border-radius: 50%;
-  height: 54px;
-  width: 54px;
+  height: 5.4rem;
+  width: 5.4rem;
 }
 
 .u-absolute-center {
@@ -25,4 +25,16 @@
 
 .u-margin-top-small {
   margin-top: $small;
+}
+
+.u-hr {
+  background-color: $color-medium-grey;
+  border: none;
+  height: 1px;
+  margin: 1.8rem 0;
+
+  &--primary {
+    background-color: $color-primary;
+    height: 2px;
+  }
 }

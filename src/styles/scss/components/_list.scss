@@ -1,13 +1,14 @@
 .list {
   list-style: none;
+  margin-bottom: 3rem;
 
   &__item {
     background-color: $color-light-grey;
-    border-radius: 0.4rem;
+    // border-radius: 0.4rem;
     display: flex;
     padding: 1.2rem;
     justify-content: space-between;
-    margin: $medium 0;
+    // margin: $medium 0;
     transition: background-color 0.2s ease;
     width: 100%;
 
@@ -18,7 +19,12 @@
 
   &__link {
     color: $color-blue;
+    display: block;
     text-decoration: none;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-medium-grey;
+    }
   }
 
   &__title {
