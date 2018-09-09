@@ -5,26 +5,33 @@ const SearchResultsList = props => {
     <div>
       {props.resultsData && (
         <div>
-          <h2 className="subheading u-margin-top-medium">
+          <h2 class="subheading subheading--grey u-margin-top-medium">
             Results for "{props.searchTerm}"
           </h2>
-          <hr className="u-hr u-hr--primary u-margin-top-small" />
-          <ul className="list">
+          <table className="table u-margin-top-large">
+            <tr className="table__row">
+              <th className="table__heading">Title</th>
+              <th className="table__heading">Author</th>
+            </tr>
             {props.resultsData.map(result => (
-              <a
-                href={`/book/${result.id}`}
-                className="list__link"
-                key={result.id}
-              >
-                <li className="list__item">
-                  <div className="list__title">{result.volumeInfo.title}</div>
-                  {result.volumeInfo.authors && (
-                    <div>by {result.volumeInfo.authors[0]}</div>
-                  )}
-                </li>
-              </a>
+              <tr className="table__row">
+                <td className="table__data">
+                  <a
+                    href={`/book/${result.id}`}
+                    className="list__link"
+                    key={result.id}
+                  >
+                    {result.volumeInfo.title}
+                  </a>
+                </td>
+                {result.volumeInfo.authors && (
+                  <td className="table__data">
+                    {result.volumeInfo.authors[0]}
+                  </td>
+                )}
+              </tr>
             ))}
-          </ul>
+          </table>
         </div>
       )}
     </div>

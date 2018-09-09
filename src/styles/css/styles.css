@@ -49,6 +49,9 @@ body {
   font-size: 2.4rem;
   font-weight: 300;
 }
+.subheading--grey {
+  color: #929292;
+}
 
 .u-spinner {
   animation: spin 1s linear infinite;
@@ -117,6 +120,7 @@ body {
 }
 
 .nav {
+  border-bottom: 1px solid #2bcbba;
   margin-bottom: 4rem;
 }
 .nav__container {
@@ -154,7 +158,8 @@ body {
 }
 .search-box__input {
   background-color: #f6f6f6;
-  border: none;
+  border: 1px solid #dadada;
+  border-right: none;
   border-radius: 0.6rem 0 0 0.6rem;
   font-family: inherit;
   font-size: inherit;
@@ -167,7 +172,7 @@ body {
 }
 .search-box__button {
   background-color: #2bcbba;
-  border: none;
+  border: 1px solid #dadada;
   border-radius: 0 0.6rem 0.6rem 0;
   color: #fff;
   cursor: pointer;
@@ -184,6 +189,29 @@ body {
 }
 .search-box__button:hover {
   background-color: #27b6a7;
+}
+
+.table {
+  border: 1px solid #dadada;
+  border-top: 0.8rem solid #2bcbba;
+  border-radius: 0.8rem;
+  border-spacing: 0;
+  width: 100%;
+}
+.table__heading {
+  background-color: #f6f6f6;
+  border-bottom: 2px solid #dadada;
+  color: #929292;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.8rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+.table__data {
+  color: #4b7bec;
+  border-bottom: 1px solid #dadada;
+  padding: 1.8rem;
 }
 
 .container {
